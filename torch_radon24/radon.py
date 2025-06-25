@@ -27,6 +27,7 @@ class Radon(torch.nn.Module):
         self.thetas = torch.tensor(thetas[:, None, None], dtype=torch.float32)
         # self.cos_al, self.sin_al = thetas.cos(), thetas.sin()
 
+    @torch.no_grad()
     def forward(self, image):
         """Apply radon transformation on input image.
 
@@ -69,6 +70,7 @@ class Radon(torch.nn.Module):
         out_fl = out_fl.permute(0, 1, 3, 2)
         return out_fl
 
+    @torch.no_grad()
     def filter_backprojection(self, sinogram):
         """Apply (filtered) backprojection on sinogram.
 
