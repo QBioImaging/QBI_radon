@@ -57,3 +57,29 @@ def get_pad_width(image_size):
     pad_width = tuple((pb, p - pb) for pb, p in zip(pad_before, pad))
 
     return pad_width
+
+def ramp_filter_torch(sinogram, device="cpu"):
+    """
+    Apply ramp filter to a batched sinogram tensor: [B, 1, D, A]
+    Returns: filtered sinogram of same shape
+    """
+    B, C, D, A = sinogram.shape
+    n = int(2 ** torch.ceil(torch.log2(torch.tensor(D, dtype=torch.float32))))  # padded size
+    freqs = torch.fft.fftfreq(n, device=device).abs()  # [n]
+    ramp = 2 * freqs  # [n]
+
+    # Pad detector axis (dim=2)
+    pad_size = n - D
+    sino_padded = torch.nn.functional.pad(sinogram, (0, 0, 0, pad_size))  # [B, 1, n, A]
+
+    # FFT along detector axis
+    sino_fft = torch.fft.fft(sino_padded, dim=2)
+
+    # Apply ramp filter
+    ramp = ramp.view(1, 1, -1, 1)  # reshape for broadcasting
+    filtered_fft = sino_fft * ramp.to(sinogram.device)
+
+    # Inverse FFT and crop back to original detector size
+    filtered_sino = torch.real(torch.fft.ifft(filtered_fft, dim=2))[:, :, :D, :]
+
+    return filtered_sino
