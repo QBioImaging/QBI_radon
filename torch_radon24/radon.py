@@ -71,6 +71,7 @@ class Radon(torch.nn.Module):
         return out_fl
 
     @torch.no_grad()
+    @torch.no_grad()
     def filter_backprojection(self, sinogram):
         """Apply (filtered) backprojection on sinogram.
 
