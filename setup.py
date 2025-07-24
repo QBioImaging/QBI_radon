@@ -5,12 +5,12 @@ with open("README.md", "r") as fh:
     long_description = fh.read()
 
 setup(
-    name="torch_radon24",
+    name="QBI_radon",
     version="1.6",
     description="Radon Transformation for Pytorch 2.0 package",
     author="Minh Nhat Trinh",
     license="GNU GENERAL PUBLIC LICENSE",
-    packages=["torch_radon24"],
+    packages=["QBI_radon"],
     install_requires=[
         "torch>=2.0.0",
         "numpy>=1.25.0",
