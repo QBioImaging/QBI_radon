@@ -52,7 +52,9 @@ pip install QBI-radon
 You can try the library from your browser using Google Colab, you can find an example notebook [here](https://colab.research.google.com/drive/1GqOcOWj128oQ2ojBy8VX5bzg0zAY_MDz?usp=sharing).
 
 ## 📚 Citation
-If you are using QBI_radon in your research, please cite the following paper:
+If you are using QBI_radon in your research, please cite the following:
+
+[![DOI](https://zenodo.org/badge/811419352.svg)](https://doi.org/10.5281/zenodo.16416058)
 <!-- 
 ```bibtex
 @article{qbi_radon,
