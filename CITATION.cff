@@ -1,0 +1,9 @@
+cff-version: 1.1.0
+message: "If you use this library, please cite it as below."
+authors:
+- family-names: Trinh
+  given-names: Minh-Nhat
+orcid: https://orcid.org/0000-0002-4154-5256
+title:QBioImaging/QBI_radon: QBI-radon
+version: v1.7
+date-released: 2025-07-24
