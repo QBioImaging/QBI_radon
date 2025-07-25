@@ -55,15 +55,18 @@ You can try the library from your browser using Google Colab, you can find an ex
 If you are using QBI_radon in your research, please cite the following:
 
 [![DOI](https://zenodo.org/badge/811419352.svg)](https://doi.org/10.5281/zenodo.16416058)
-<!-- 
+
 ```bibtex
-@article{qbi_radon,
-  title={QBI_radon: A PyTorch library for Radon transform},
-  author={QBI_radon},
-  journal={arXiv preprint arXiv:2507.12345},
-  year={2025}
+@software{Trinh_QBioImaging_QBI_radon_2025,
+author = {Trinh, Minh-Nhat and Teresa, M Correia},
+doi = {https://doi.org/10.5281/zenodo.16416059},
+month = jul,
+title = {{QBioImaging/QBI\_radon}},
+url = {https://github.com/QBioImaging/QBI_radon},
+version = {v1.7},
+year = {2025}
 }
-``` -->
+```
 
 <!-- ## 📝 Acknowledgements
 This study received Portuguese national funds from FCT—Foundation for Science and Technology through projects UIDB/04326/2020 (DOI:https://doi.org/10.54499/UIDB/04326/2020), UIDP/04326/2020 (DOI:https://doi.org/10.54499/UIDP/04326/2020) and LA/P/0101/2020 (DOI:https://doi.org/10.54499/LA/P/0101/2020). This Project received funding from ‘la Caixa’ Foundation and FCT, I P under the Project code LCF/PR/HR22/00533, European Union’s Horizon 2020 research and innovation program under the Marie Skłodowska-Curie OPTIMAR grant with agreement no 867450 (DOI:https://doi.org/10.3030/867450), European Union’s Horizon Europe Programme IMAGINE under grant agreement no. 101094250

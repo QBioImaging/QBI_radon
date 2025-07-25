@@ -1,0 +1,14 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite it as below."
+authors:
+- family-names: "Trinh"
+  given-names: "Minh-Nhat"
+  orcid: "https://orcid.org/0000-0002-4154-5256"
+- family-names: "Teresa"
+  given-names: "M Correia"
+  orcid: "https://orcid.org/0000-0002-1606-9550"
+title: "QBioImaging/QBI_radon"
+version: v1.7
+doi: https://doi.org/10.5281/zenodo.16416059
+date-released: 2025-07-24
+url: "https://github.com/QBioImaging/QBI_radon"
