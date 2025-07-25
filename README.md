@@ -30,8 +30,8 @@ The Radon transform maps an image to its Radon space representation — a key op
 - Deep learning for CT image reconstruction  
 - Model-based & hybrid inverse problems  
 - Differentiable physics-based layers in neural networks  
+- GPU-accelerated Filtered Backprojection
 
----
 
 ## 🔧 Implemented Operations
 
