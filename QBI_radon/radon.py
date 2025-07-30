@@ -11,7 +11,7 @@ class Radon(torch.nn.Module):
     Args:
         thetas (int): list of angles for radon transformation (default: [0, np.pi])
         circle (bool): if True, only the circle is reconstructed (default: False)
-        filter_name (str): filter for backprojection, can be "ramp" or "shepp_logan" or "cosine" or "hamming" or "hann" (default: "ramp")
+        filter_name (str): filter for backprojection, can be "ramp" or "shepp-logan" or "cosine" or "hamming" or "hann" (default: "ramp")
         device: (str): device can be either "cuda" or "cpu" (default: cuda")
     """
 
@@ -106,7 +106,7 @@ class Radon(torch.nn.Module):
         y_grid = torch.linspace(-1, 1, self.n_angles)
 
         # Reconstruct using a for loop
-        for i, (cos_al, sin_al, y_colume) in enumerate(zip(cos_angles, sin_angles, y_grid)):
+        for cos_al, sin_al, y_colume in zip(cos_angles, sin_angles, y_grid):
             tgrid = (grid_x * cos_al - grid_y * sin_al).unsqueeze(0).unsqueeze(-1)
             y = torch.ones_like(tgrid) * y_colume
             grid = torch.cat((y, tgrid), dim=-1).to(self.device)

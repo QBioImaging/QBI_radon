@@ -6,8 +6,8 @@ with open("README.md", "r", encoding="utf-8") as fh:
 
 setup(
     name="QBI_radon",
-    version="1.7",
-    description="Radon Transformation for Pytorch 2.0 package",
+    version="1.8.1",
+    description="Radon Transformation for Pytorch 2",
     author="Minh Nhat Trinh",
     license="GNU GENERAL PUBLIC LICENSE",
     packages=["QBI_radon"],

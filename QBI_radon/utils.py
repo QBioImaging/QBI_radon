@@ -10,7 +10,7 @@ def fourier_filter(name, size, device="cpu"):
 
     if name == "ramp":
         pass
-    elif name == "shepp_logan":
+    elif name == "shepp-logan":
         omega = torch.pi * torch.fft.fftfreq(size)[1:]
         fourier_filter[1:] *= torch.sin(omega) / omega
 
@@ -25,7 +25,7 @@ def fourier_filter(name, size, device="cpu"):
     elif name == "hann":
         fourier_filter *= torch.fft.fftshift(torch.hann_window(size, periodic=False))
     else:
-        print(f"[TorchRadon] Error, unknown filter type '{name}', available filters are: 'ramp', 'shepp_logan', 'cosine', 'hamming', 'hann'")
+        print(f"[TorchRadon] Error, unknown filter type '{name}', available filters are: 'ramp', 'shepp-logan', 'cosine', 'hamming', 'hann'")
 
     filter = fourier_filter.to(device)
 
