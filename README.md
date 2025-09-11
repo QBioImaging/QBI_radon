@@ -47,6 +47,14 @@ Additional projection geometries and advanced features are under development. St
 pip install QBI-radon
 ```
 
+## 📊 Benchmarking
+
+We benchmarked **QBI_radon** against the widely used `skimage` implementation of the Radon transform on a **NVIDIA GeForce RTX 4070 SUPER** with the following settings:
+
+![Benchmarking Results](benchmarking.png)
+
+👉 **QBI_radon is more than 25× faster** than the CPU-based `skimage` implementation in both forward and backward projections.
+
 ## 🚀 Google Colab
 
 You can try the library from your browser using Google Colab, you can find an example notebook [here](https://colab.research.google.com/drive/1GqOcOWj128oQ2ojBy8VX5bzg0zAY_MDz?usp=sharing).
@@ -68,6 +76,6 @@ year = {2025}
 }
 ```
 
-<!-- ## 📝 Acknowledgements
+## 📝 Acknowledgements
 This study received Portuguese national funds from FCT—Foundation for Science and Technology through projects UIDB/04326/2020 (DOI:https://doi.org/10.54499/UIDB/04326/2020), UIDP/04326/2020 (DOI:https://doi.org/10.54499/UIDP/04326/2020) and LA/P/0101/2020 (DOI:https://doi.org/10.54499/LA/P/0101/2020). This Project received funding from ‘la Caixa’ Foundation and FCT, I P under the Project code LCF/PR/HR22/00533, European Union’s Horizon 2020 research and innovation program under the Marie Skłodowska-Curie OPTIMAR grant with agreement no 867450 (DOI:https://doi.org/10.3030/867450), European Union’s Horizon Europe Programme IMAGINE under grant agreement no. 101094250
-(DOI:https://doi.org/10.3030/101094250), and NVIDIA GPU hardware grant. -->
+(DOI:https://doi.org/10.3030/101094250), and NVIDIA GPU hardware grant.
