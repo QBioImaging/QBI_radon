@@ -53,7 +53,7 @@ We benchmarked **QBI_radon** against the widely used `skimage` implementation of
 
 ![Benchmarking Results](benchmarking.png)
 
-👉 **QBI_radon is more than 25× faster** than the CPU-based `skimage` implementation in both forward and backward projections.
+👉 **QBI_radon is > 25× faster** than the CPU-based `skimage` implementation in both forward and backward projections.
 
 ## 🚀 Google Colab
 
